@@ -16,7 +16,7 @@ import { useUserStore } from '@/stores/user.ts'
   //登录（表单提交）
   const router = useRouter() // 初始化路由实例
   const onSubmit = () => {
-    store.setUser({userType: 'part'})
+    store.setUser({token: '123456',userType: 'part'})
     if (store.user?.userType == 'part'){
       // 登录成功后跳转
       router.push({
@@ -28,7 +28,7 @@ import { useUserStore } from '@/stores/user.ts'
     }
   };
   const onSubmitFull = () => {
-    store.setUser({userType: 'full'})
+    store.setUser({token: '123456', userType: 'full'})
     if (store.user?.userType == 'full'){
       // 登录成功后跳转
       router.push({
