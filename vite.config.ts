@@ -8,7 +8,16 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: 'baoshi-square',
+  // GitHub Pages 配置
+  base: process.env.NODE_ENV === 'production' ? '/baoshi-quare/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
+  // 处理 Lottie 文件路径
+  define: {
+    __VUE_PROD_DEVTOOLS__: false,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
