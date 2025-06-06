@@ -77,7 +77,17 @@ import faceIdIcon from '@/assets/images/login/face_id.png'
   };
   // 密码显隐
   const passwordStatus = ref<boolean>(false);
+  //去注册
+  const goRegister = () => {
+      // 登录成功后跳转
+      router.push({
+        path: '/register', // 目标路由路径
+        query: {
+          // from: 'login' // 可选参数
+        }
+      })
 
+  };
 
 
 </script>
@@ -155,10 +165,10 @@ import faceIdIcon from '@/assets/images/login/face_id.png'
 <!--        注册/进入主页TODO-->
         <van-row  class="margin-top-20-gl">
           <van-col offset="2" span="13">
-            <div class="text-primary-gl">Register</div>
+            <div class="text-primary-gl" @click="goRegister">Register</div>
           </van-col>
           <van-col>
-            <div class="text-primary-gl">Join as Guest</div>
+            <div class="text-primary-gl" @click="onSubmit">Join as Guest</div>
           </van-col>
         </van-row>
 <!--        三方登录TODO-->

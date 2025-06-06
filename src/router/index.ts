@@ -22,6 +22,10 @@ const router = createRouter({
       component: () => import('@/views/LoginModule/Login/LoginIndex.vue')
     },
     {
+      path: '/register',//注册页
+      component: () => import('@/views/LoginModule/Register/RegisterIndex.vue')
+    },
+    {
       path: '/',
       component: () => import('@/layouts/MainLayout.vue'),
       children: [

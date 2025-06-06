@@ -3,11 +3,14 @@
 </script>
 
 <template>
-  <div>
-    1232131
+  <div class="default-bg">
+
   </div>
 </template>
 
 <style scoped lang="scss">
+@use "index";
+
+
 
 </style>

@@ -3,7 +3,9 @@
 </script>
 
 <template>
+  <div class="default-bg">
 
+  </div>
 </template>
 
 <style scoped lang="scss">

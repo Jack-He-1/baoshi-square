@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { Button,Tab,Tabs,Form,Field,CellGroup,Picker,Popup,Col,Row,Divider,Image,Tabbar, TabbarItem  } from 'vant';
+import { Button,Tab,Tabs,Form,Field,CellGroup,Picker,Popup,Col,Row,Divider,Image,Tabbar,TabbarItem,Step,Steps,Toast } from 'vant';
 import pinia from './stores'
 
 import '@/styles/global.scss'
@@ -37,4 +37,8 @@ app.use(Divider);
 app.use(Image);
 app.use(Tabbar);
 app.use(TabbarItem);
+app.use(Step)
+app.use(Steps)
+app.use(Toast)
+
 app.mount('#app')
