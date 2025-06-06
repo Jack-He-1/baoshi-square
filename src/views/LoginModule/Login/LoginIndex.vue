@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router' // 引入路由功能
 import { useUserStore } from '@/stores/user.ts'
+import padlockIcon from '@/assets/images/login/svg/icons8_padlock.svg'
   //用户信息
   const store = useUserStore()
 
@@ -118,7 +119,7 @@ import { useUserStore } from '@/stores/user.ts'
               <div class="login-phone-password-title">Password</div>
                 <van-field
                   v-model="password"
-                  left-icon="src/assets/images/login/svg/icons8_padlock.svg"
+                  :left-icon="padlockIcon"
                   :type="!passwordStatus? 'password' : 'text'"
                   placeholder="password"
                   @click-right-icon="passwordStatus = !passwordStatus"
