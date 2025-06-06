@@ -3,7 +3,7 @@ import '@lottiefiles/lottie-player'
 import type { LottiePlayer } from '@lottiefiles/lottie-player'
 //路由相关
 import { useRoute } from 'vue-router'
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useUserStore } from '@/stores/user.ts'
 //用户信息
 const store = useUserStore()
@@ -31,12 +31,9 @@ const fullTabs: TabItem[] = [
   { path: '/working-hours', icon: 'working_hours.json', label: 'Working Hours' },
   { path: '/me', icon: 'me.json', label: 'Me' }
 ]
-// 添加图标预加载逻辑
-onMounted(() => {
-  [tabs, fullTabs].flat().forEach(tab => {
-    new Image().src = `/src/assets/lottie/tabbar/${tab.icon}`
-  })
-})
+const getLottiePath = (icon: string) => {
+  return new URL(`/src/assets/lottie/tabbar/${icon}`, import.meta.url).href
+}
 
 // Lottie控制逻辑
 const lottieRefs = ref<{ [key: string]: LottiePlayer | null }>({})
@@ -84,7 +81,7 @@ const hidePaths = ['/login', '/register'] // 需要隐藏导航的路径
           :autoplay="false"
           :loop="false"
           speed="1.4"
-          :src="`/src/assets/lottie/tabbar/${tab.icon}`"
+          :src="getLottiePath(tab.icon)"
           style="width: 30px; height: 30px;margin: auto"
           class="tab-icon"
           :class="{ inactive: route.path !== tab.path }"

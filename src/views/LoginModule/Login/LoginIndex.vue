@@ -2,7 +2,14 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router' // 引入路由功能
 import { useUserStore } from '@/stores/user.ts'
+//导入资源
 import padlockIcon from '@/assets/images/login/svg/icons8_padlock.svg'
+import facebookIcon from '@/assets/images/login/facebook.png'
+import googleIcon from '@/assets/images/login/google.png'
+import faceIdIcon from '@/assets/images/login/face_id.png'
+
+
+
   //用户信息
   const store = useUserStore()
 
@@ -160,13 +167,13 @@ import padlockIcon from '@/assets/images/login/svg/icons8_padlock.svg'
             <van-divider class="other-login">one-tap login</van-divider>
           </van-col>
           <van-col offset="1" span="4" class="other-login-img">
-            <van-image width="40" height="40" src="src/assets/images/login/facebook.png"/>
+            <van-image width="40" height="40" :src="facebookIcon"/>
           </van-col>
           <van-col span="4" class="other-login-img">
-            <van-image width="30" height="30" src="src/assets/images/login/google.png"/>
+            <van-image width="30" height="30" :src="googleIcon"/>
           </van-col>
           <van-col span="4" class="other-login-img">
-            <van-image width="40" height="40" src="src/assets/images/login/face_id.png"/>
+            <van-image width="40" height="40" :src="faceIdIcon"/>
           </van-col>
         </van-row>
 
