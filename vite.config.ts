@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: 'baoshi-square',
+  base: 'jack-he-1.github.io/baoshi-square',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
