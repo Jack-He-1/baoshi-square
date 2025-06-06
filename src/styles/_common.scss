@@ -1,0 +1,9 @@
+@mixin viewport-baseline {
+  @media screen and (max-width: 750px) {
+    html {
+      font-size: calc(100vw / 375 * 16); // 保持与设计稿比例一致
+      -webkit-text-size-adjust: none;
+      touch-action: pan-x pan-y;
+    }
+  }
+}

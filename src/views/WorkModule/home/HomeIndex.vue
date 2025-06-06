@@ -3,8 +3,11 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  <div>
+    1232131
+  </div>
 </template>
-<style scoped>
+
+<style scoped lang="scss">
 
 </style>

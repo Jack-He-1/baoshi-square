@@ -1,0 +1,46 @@
+:root {
+  /* 基础颜色变量 */
+  --primary-color: #fa5c5c; // 主色
+  //--success-color: #00b578; // 成功色
+  //--warning-color: #ff8f1f; // 警告色
+  //--danger-color: #ff3141; // 危险色
+
+  /* 文字变量 */
+  --text-color: rgba(0, 0, 0, 0.88); // 主要文字
+  --text-secondary-color: rgba(0, 0, 0, 0.6); // 次要文字
+
+  /* 间距变量 */
+  --base-padding: 8px;
+  --base-margin: 12px;
+
+  /* 圆角变量 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 14px;
+  /* 字体阶梯系统 */
+  --van-font-size-xs: 12px;
+  --van-font-size-sm: 14px;
+  --van-font-size-md: 16px;
+  --van-font-size-lg: 18px;
+
+
+  /* 覆盖 Vant 主题变量 */
+  --van-primary-color: var(--primary-color);
+  //--van-success-color: var(--success-color);
+  //--van-danger-color: var(--danger-color);
+  //--van-text-color: var(--text-color);
+
+  /* 组件级定制 */
+  //全局按钮样式
+  --van-button-default-border-color: var(--primary-color);
+  --van-button-radius: var(--border-radius-lg);
+  --van-button-default-color: var(--primary-color);
+  --van-button-default-font-size: var(--van-font-size-lg);
+  //全局导航栏样式
+  --van-tabbar-height: 70px;
+  --van-tabbar-background: #fefafa;
+  --van-tabbar-item-active-background: #fefafa;
+
+
+
+}

@@ -1,0 +1,124 @@
+// src/views/Login/index.scss
+
+/* 引入背景图像 */
+$background-image: url('@/assets/images/login/login_bg.webp');
+
+/* 设置背景样式 */
+.login-container {
+  /* 背景图像 */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 1) 70%,
+  ),$background-image;
+  background-size: 100% 40%, contain; // 背景图像覆盖整个容器
+  background-position: top, top;
+  background-repeat: no-repeat; // 背景图像不重复
+
+  /* 容器样式 */
+  height: 100vh; // 容器高度为视口高度
+  width: 100%; // 容器宽度为 100%
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  .login-title{
+    position: absolute;
+    font-weight: 700;
+    top: 11vh;
+    left: 5%;
+    font-size: 32px;
+  }
+
+
+  .login-form{
+    margin-top: 18vh;
+    background: #FFFFFF;
+    width: 95%;
+    height: 80vh;
+    border-radius: 20px 20px 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* 水平居中 */
+    .login-form-box{
+      width: 100%;
+      .login-form-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;     /* 水平居中 */
+        margin-bottom: 5px;
+        transition: height 0.3s ease;
+        .login-phone-title{
+          align-self: flex-start;
+          margin: 20px 0 10px 15px;
+          font-weight: 700;
+        }
+        .login-phone{
+          width: 90%;
+          display: flex;
+          .login-area-code{
+            width: 90px;
+            height: 45px;
+            border: 2px solid #d2d2d2;
+            padding: 10px;
+            border-radius: 14px;
+          }
+          .login-phone-input{
+            margin-left: 5px;
+            height: 45px;
+            border: 2px solid #d2d2d2;
+            border-radius: 14px;
+          }
+        }
+        .login-phone-password-title{
+          align-self: flex-start;
+          margin: 20px 0 10px 15px;
+          font-weight: 700;
+        }
+        .login-password-input{
+          height: 45px;
+          border: 2px solid #d2d2d2;
+          border-radius: 14px;
+        }
+        .login-phone-password{
+          width: 90%;
+        }
+      }
+    }
+    .login-tabs{
+      margin-top: 2vh;
+      width: 90%;
+    }
+
+
+
+    .terms-text{
+      font-size: 13px;
+      color: #9a9a9a;
+    }
+    .login-button-go{
+      width: 100%;
+      height: 55px;
+      font-size: 18px;
+    }
+    .other-login{
+      --van-divider-border-color: '#9a9a9a';
+    }
+    .other-login-img{
+      border: 1px solid  #9a9a9a;
+      border-radius: 24px;
+      align-content: center;
+      text-align: center;
+      margin-right: 10px;
+      // 保持1:1比例
+      aspect-ratio: 1;
+      // 防止内容溢出
+      overflow: hidden;
+    }
+  }
+
+
+}
+
+
+

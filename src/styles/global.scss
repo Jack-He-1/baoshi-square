@@ -1,0 +1,38 @@
+//字体颜色
+.text-gray-gl{
+  color: #d2d2d2;
+}
+.text-primary-gl{
+  color: var(--primary-color);
+}
+//字体尺寸
+.text-13-font-gl{
+  font-size: 13px;
+}
+//* {
+//  outline: 1px solid rgba(255,0,0,0.1); // 全局元素轮廓可视化
+//}
+
+//导航栏阴影
+.van-tabbar {
+  transform: translateZ(0);
+  // 基础阴影配置
+  box-shadow: 0 -1px 20px rgba(0,0,0,0.1);// 提升阴影层次感
+  backdrop-filter: blur(20px) saturate(180%); // 增强毛玻璃效果
+
+  // 浏览器兼容方案
+  @supports (-webkit-backdrop-filter: none) {
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+}
+
+//垂直间距
+.margin-top-20-gl{
+  margin-top: 20px;
+}
+.margin-top-40-gl{
+  margin-top: 40px;
+}
+
+

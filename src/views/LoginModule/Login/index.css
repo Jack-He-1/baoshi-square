@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* 引入背景图像 */
+/* 设置背景样式 */
+.login-container {
+  /* 背景图像 */
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 70%), url("@/assets/images/login/login_bg.webp");
+  background-size: 100% 40%, contain;
+  background-position: top, top;
+  background-repeat: no-repeat;
+  /* 容器样式 */
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.login-container .login-title {
+  position: absolute;
+  font-weight: 700;
+  top: 11vh;
+  left: 5%;
+  font-size: 32px;
+}
+.login-container .login-form {
+  margin-top: 18vh;
+  background: #FFFFFF;
+  width: 95%;
+  height: 80vh;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中 */
+}
+.login-container .login-form .login-form-box {
+  width: 100%;
+}
+.login-container .login-form .login-form-box .login-form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中 */
+  margin-bottom: 5px;
+  transition: height 0.3s ease;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone-title {
+  align-self: flex-start;
+  margin: 20px 0 10px 15px;
+  font-weight: 700;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone {
+  width: 90%;
+  display: flex;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone .login-area-code {
+  width: 90px;
+  height: 45px;
+  border: 2px solid #d2d2d2;
+  padding: 10px;
+  border-radius: 14px;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone .login-phone-input {
+  margin-left: 5px;
+  height: 45px;
+  border: 2px solid #d2d2d2;
+  border-radius: 14px;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone-password-title {
+  align-self: flex-start;
+  margin: 20px 0 10px 15px;
+  font-weight: 700;
+}
+.login-container .login-form .login-form-box .login-form-content .login-password-input {
+  height: 45px;
+  border: 2px solid #d2d2d2;
+  border-radius: 14px;
+}
+.login-container .login-form .login-form-box .login-form-content .login-phone-password {
+  width: 90%;
+}
+.login-container .login-form .login-tabs {
+  margin-top: 2vh;
+  width: 90%;
+}
+.login-container .login-form .terms-text {
+  font-size: 13px;
+  color: #9a9a9a;
+}
+.login-container .login-form .login-button-go {
+  width: 100%;
+  height: 55px;
+  font-size: 18px;
+}
+.login-container .login-form .other-login {
+  --van-divider-border-color: "#9a9a9a";
+}
+.login-container .login-form .other-login-img {
+  border: 1px solid #9a9a9a;
+  border-radius: 24px;
+  align-content: center;
+  text-align: center;
+  margin-right: 10px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=index.css.map */

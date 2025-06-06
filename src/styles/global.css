@@ -1,0 +1,32 @@
+.text-gray-gl {
+  color: #d2d2d2;
+}
+
+.text-primary-gl {
+  color: var(--primary-color);
+}
+
+.text-13-font-gl {
+  font-size: 13px;
+}
+
+.van-tabbar {
+  transform: translateZ(0);
+  box-shadow: 0 -1px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+@supports (-webkit-backdrop-filter: none) {
+  .van-tabbar {
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+}
+
+.margin-top-20-gl {
+  margin-top: 20px;
+}
+
+.margin-top-40-gl {
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=global.css.map */

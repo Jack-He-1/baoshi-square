@@ -1,0 +1,18 @@
+.gray_theme_c_tabs{
+  --van-tabs-default-color: #9a9a9a;
+  --van-tabs-card-height: 40px;
+}
+:deep().van-tab--card.van-tab--active{
+  color: #000000;
+  border-radius: 20px;
+  background: #FFFFFF;
+}
+:deep().van-tabs__nav--card{
+  border: solid 3px #d2d2d2;
+  border-radius: 20px;
+  background: #d2d2d2;
+}
+:deep().van-tab--card{
+  color: #9a9a9a;
+  border: 0;
+}
