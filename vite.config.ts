@@ -9,7 +9,7 @@ export default defineConfig({
     vue(),
   ],
   // GitHub Pages 配置
-  base: process.env.NODE_ENV === 'production' ? '/baoshi-quare/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/baoshi-square/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
