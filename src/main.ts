@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { Button,Tab,Tabs,Form,Field,CellGroup,Picker,Popup,Col,Row,Divider,Image,Tabbar,TabbarItem,Step,Steps,Toast } from 'vant';
+import { Button,Tab,Tabs,Form,Field,CellGroup,Picker,Popup,Col,Row,Divider,Image,Tabbar,TabbarItem,Step,Steps,Toast,Uploader,Calendar,Checkbox,CheckboxGroup,Radio,RadioGroup } from 'vant';
 import pinia from './stores'
 
 import '@/styles/global.scss'
@@ -20,8 +20,8 @@ app.use(createPinia().use(persist))
 
 app.use(createPinia())
 
-app.use(pinia)
-app.use(router)
+app.use(pinia);
+app.use(router);
 app.use(Button);
 app.use(Tab);
 app.use(Tabs);
@@ -37,8 +37,14 @@ app.use(Divider);
 app.use(Image);
 app.use(Tabbar);
 app.use(TabbarItem);
-app.use(Step)
-app.use(Steps)
-app.use(Toast)
+app.use(Step);
+app.use(Steps);
+app.use(Toast);
+app.use(Uploader);
+app.use(Calendar);
+app.use(Checkbox);
+app.use(CheckboxGroup);
+app.use(Radio);
+app.use(RadioGroup);
 
 app.mount('#app')

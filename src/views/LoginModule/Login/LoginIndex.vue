@@ -55,7 +55,7 @@ import faceIdIcon from '@/assets/images/login/face_id.png'
   const pickerValue = ref<string[]>([]);
   // 定义区号选项的类型
   interface AreaCodeOption {
-    text: string;
+    key: string;
     value: string;
   }
 
@@ -65,13 +65,13 @@ import faceIdIcon from '@/assets/images/login/face_id.png'
   }
   // 区号选择器数据
   const areaCodes = ref([
-    { text: 'China (+86)', value: '86' },
-    { text: 'United States of America (+1)', value: '1' },
-    { text: 'Singaporean (+65)', value: '65' }
+    { key: '86', value: 'China (+86)' },
+    { key: '1', value: 'United States of America (+1)' },
+    { key: '65', value: 'Singaporean (+65)' }
   ]);
   // 区号选择器确认事件
   const onConfirm = ({ selectedValues, selectedOptions }: PickerConfirmEvent) => {
-    areaCode.value = selectedOptions[0]?.value;
+    areaCode.value = selectedOptions[0]?.key;
     pickerValue.value = selectedValues;
     showPicker.value = false;
   };
@@ -196,6 +196,7 @@ import faceIdIcon from '@/assets/images/login/face_id.png'
   <!-- 区号选择弹窗 -->
   <van-popup v-model:show="showPicker"  destroy-on-close position="bottom">
     <van-picker
+      :columns-field-names="{text:'value', value:'key'}"
       title="Select Area Code"
       :columns="areaCodes"
       :model-value="pickerValue"
